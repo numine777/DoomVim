@@ -1,0 +1,6 @@
+#!/bin/sh
+
+export DOOMVIM_RUNTIME_DIR="${DOOMVIM_RUNTIME_DIR:-$HOME/.local/share/doomvim}"
+export DOOMVIM_CONFIG_DIR="${DOOMVIM_CONFIG_DIR:-$HOME/.config/dvim}"
+
+exec nvim -u "$DOOMVIM_RUNTIME_DIR/dvim/init.lua" "$@"
