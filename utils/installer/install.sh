@@ -3,7 +3,7 @@ set -eo pipefail
 
 #Set branch to master unless specified by the user
 declare DV_BRANCH="${DV_BRANCH:-"rolling"}"
-declare -r DV_REMOTE="${DV_REMOTE:-doomvim/doomvim.git}"
+declare -r DV_REMOTE="${DV_REMOTE:-numine777/doomvim.git}"
 declare -r INSTALL_PREFIX="${INSTALL_PREFIX:-"$HOME/.local"}"
 
 declare -r XDG_DATA_HOME="${XDG_DATA_HOME:-"$HOME/.local/share"}"
@@ -286,7 +286,7 @@ function install_packer() {
 function clone_dvim() {
   msg "Cloning DoomVim configuration"
   if ! git clone --branch "$DV_BRANCH" \
-    --depth 1 "https://github.com/${DV_REMOTE}" "$DOOMVIM_RUNTIME_DIR/dvim"; then
+    --depth 1 "git@github.com:${DV_REMOTE}" "$DOOMVIM_RUNTIME_DIR/dvim"; then
     echo "Failed to clone repository. Installation failed."
     exit 1
   fi
