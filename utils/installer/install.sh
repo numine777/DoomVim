@@ -344,8 +344,8 @@ function setup_dvim() {
 
   echo "Preparing Packer setup"
 
-  cp "$DOOMVIM_RUNTIME_DIR/dvim/utils/installer/config.example-no-ts.lua" \
-    "$DOOMVIM_CONFIG_DIR/config.lua"
+  # cp "$DOOMVIM_RUNTIME_DIR/dvim/utils/installer/config.example-no-ts.lua" \
+  #   "$DOOMVIM_CONFIG_DIR/config.lua"
 
   "$INSTALL_PREFIX/bin/dvim" --headless \
     -c 'autocmd User PackerComplete quitall' \
@@ -353,7 +353,7 @@ function setup_dvim() {
 
   echo "Packer setup complete"
 
-  cp "$DOOMVIM_RUNTIME_DIR/dvim/utils/installer/config.example.lua" "$DOOMVIM_CONFIG_DIR/config.lua"
+  # cp "$DOOMVIM_RUNTIME_DIR/dvim/utils/installer/config.example.lua" "$DOOMVIM_CONFIG_DIR/config.lua"
 }
 
 function update_dvim() {
