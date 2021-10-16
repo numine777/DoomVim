@@ -285,7 +285,7 @@ function install_packer() {
 
 function clone_dvim() {
   msg "Cloning DoomVim configuration"
-  if ! git clone --branch "$LV_BRANCH" \
+  if ! git clone --branch "$DV_BRANCH" \
     --depth 1 "https://github.com/${DV_REMOTE}" "$DOOMVIM_RUNTIME_DIR/dvim"; then
     echo "Failed to clone repository. Installation failed."
     exit 1
