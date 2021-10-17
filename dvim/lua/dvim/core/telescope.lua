@@ -122,9 +122,9 @@ function M.setup()
     end)
   end
 
-  dvim.keys.normal_mode["<leader>rr"] = ':lua require("lv-telescope").refactors()<CR>'
-  dvim.keys.visual_mode["<leader>rr"] = ':lua require("lv-telescope").refactors()<CR>'
-  dvim.keys.visual_block_mode["<leader>rr"] = ':lua require("lv-telescope").refactors()<CR>'
+  dvim.keys.normal_mode["<leader>rr"] = ':lua require("dvim.core.telescope").refactors()<CR>'
+  dvim.keys.visual_mode["<leader>rr"] = ':lua require("dvim.core.telescope").refactors()<CR>'
+  dvim.keys.visual_block_mode["<leader>rr"] = ':lua require("dvim.core.telescope").refactors()<CR>'
   dvim.keys.normal_mode["<leader>ps"] = ':lua require("telescope.builtin").grep_string({ search = vim.fn.input("Grep For > ")})<CR>'
   dvim.keys.normal_mode["<C-p>"] = ':lua require("telescope.builtin").git_files()<CR>'
   dvim.keys.normal_mode["<leader>pf"] = ':lua require("telescope.builtin").find_files()<CR>'

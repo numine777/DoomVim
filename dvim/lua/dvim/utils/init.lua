@@ -46,12 +46,12 @@ end
 
 function utils.generate_settings()
   -- Opens a file in append mode
-  local file = io.open("lv-settings.lua", "w")
+  local file = io.open("dv-settings.lua", "w")
 
   -- sets the default output file as test.lua
   io.output(file)
 
-  -- write all `dvim` related settings to `lv-settings.lua` file
+  -- write all `dvim` related settings to `dv-settings.lua` file
   r_inspect_settings(dvim, 10000, ".")
 
   -- closes the open file
