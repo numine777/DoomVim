@@ -13,7 +13,7 @@ declare -r XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-"$HOME/.config"}"
 declare -r DOOMVIM_RUNTIME_DIR="${DOOMVIM_RUNTIME_DIR:-"$XDG_DATA_HOME/doomvim"}"
 declare -r DOOMVIM_CONFIG_DIR="${DOOMVIM_CONFIG_DIR:-"$XDG_CONFIG_HOME/dvim"}"
 # TODO: Use a dedicated cache directory #1256
-declare -r DOOMVIM_CACHE_DIR="$XDG_CACHE_HOME/nvim"
+declare -r DOOMVIM_CACHE_DIR="$XDG_CACHE_HOME/dvim"
 declare -r DOOMVIM_PACK_DIR="$DOOMVIM_RUNTIME_DIR/site/pack"
 
 declare BASEDIR
