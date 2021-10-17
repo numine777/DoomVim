@@ -102,7 +102,7 @@ function M:init()
   vim.fn.mkdir(get_cache_dir(), "p")
 
   -- FIXME: currently unreliable in unit-tests
-  if not os.getenv "dvim_TEST_ENV" then
+  if not os.getenv "DVIM_TEST_ENV" then
     require("dvim.impatient").setup {
       path = vim.fn.stdpath "cache" .. "/dvim_cache",
       enable_profiling = true,
