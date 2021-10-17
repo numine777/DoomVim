@@ -53,7 +53,7 @@ M.setup = function()
 
   vim.g.dashboard_custom_section = dvim.builtin.dashboard.custom_section
 
-  dvim.builtin.which_key.mappings[";"] = { "<cmd>Dashboard<CR>", "Dashboard" }
+  -- dvim.builtin.which_key.mappings[";"] = { "<cmd>Dashboard<CR>", "Dashboard" }
 
   vim.g.dashboard_session_directory = dvim.builtin.dashboard.session_directory
 
