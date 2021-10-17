@@ -98,7 +98,7 @@ function M.setup()
     }
   end
 
-  dvim.keys.normal_mode["e"] = "<cmd>NvimTreeToggle<CR>"
+  dvim.keys.normal_mode["<Leader>e"] = "<cmd>NvimTreeToggle<CR>"
 
   local tree_view = require "nvim-tree.view"
 
