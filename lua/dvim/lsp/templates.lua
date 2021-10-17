@@ -1,10 +1,10 @@
 local M = {}
 
-local Log = require "lvim.core.log"
-local utils = require "lvim.utils"
-local get_supported_filetypes = require("lvim.lsp.utils").get_supported_filetypes
+local Log = require "dvim.core.log"
+local utils = require "dvim.utils"
+local get_supported_filetypes = require("dvim.lsp.utils").get_supported_filetypes
 
-local ftplugin_dir = lvim.lsp.templates_dir
+local ftplugin_dir = dvim.lsp.templates_dir
 
 local join_paths = _G.join_paths
 
@@ -59,7 +59,7 @@ function M.generate_ftplugin(server_name, dir)
 
   for _, filetype in ipairs(filetypes) do
     local filename = join_paths(dir, filetype .. ".lua")
-    local setup_cmd = string.format([[require("lvim.lsp.manager").setup(%q)]], server_name)
+    local setup_cmd = string.format([[require("dvim.lsp.manager").setup(%q)]], server_name)
     -- print("using setup_cmd: " .. setup_cmd)
     -- overwrite the file completely
     utils.write_file(filename, setup_cmd .. "\n", "a")
@@ -85,7 +85,7 @@ function M.generate_templates(servers_names)
   end
 
   -- create the directory if it didn't exist
-  if not utils.is_directory(lvim.lsp.templates_dir) then
+  if not utils.is_directory(dvim.lsp.templates_dir) then
     vim.fn.mkdir(ftplugin_dir, "p")
   end
 
