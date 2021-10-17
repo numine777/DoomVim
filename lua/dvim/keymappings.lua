@@ -110,9 +110,6 @@ function M.config()
       -- Netrw
       ["<leader>pv"] = ":Ex<CR>",
 
-      -- NvimTreeToggle
-      ["<leader>e"] = ":NvimTreeToggle<CR>",
-
       -- Scratch
       ["<leader>gs"] = ":Scratch<CR>",
 
