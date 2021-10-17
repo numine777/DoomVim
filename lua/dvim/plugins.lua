@@ -109,7 +109,7 @@ return {
 		config = function()
 			require("dvim.core.project").setup()
 		end,
-		disable = not dvim.builtin.project.active,
+		-- disable = not dvim.builtin.project.active,
 	},
 
 	-- Icons
