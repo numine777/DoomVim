@@ -1,12 +1,12 @@
 local autocommands = {}
-local user_config_file = require("lvim.config"):get_user_config_path()
+local user_config_file = require("dvim.config"):get_user_config_path()
 
-lvim.autocommands = {
+dvim.autocommands = {
   _general_settings = {
     {
       "Filetype",
       "*",
-      "lua require('lvim.utils.ft').do_filetype(vim.fn.expand(\"<amatch>\"))",
+      "lua require('dvim.utils.ft').do_filetype(vim.fn.expand(\"<amatch>\"))",
     },
     {
       "FileType",
@@ -43,7 +43,7 @@ lvim.autocommands = {
       "*",
       "setlocal formatoptions-=c formatoptions-=r formatoptions-=o",
     },
-    { "BufWritePost", user_config_file, "lua require('lvim.config'):reload()" },
+    { "BufWritePost", user_config_file, "lua require('dvim.config'):reload()" },
     {
       "FileType",
       "qf",
